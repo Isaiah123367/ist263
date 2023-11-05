@@ -1,0 +1,48 @@
+/* Global Styles */
+body {
+    background-color: blue;
+    color: white;
+}
+
+/* Links */
+a {
+    color: tan;
+}
+
+a:hover {
+    color: black;  /* Highlights the link color when hovered */
+}
+
+/* Paragraphs */
+p {
+    background-color: #7d7d7d;
+    padding: 20px;
+    border: 2px solid #000000;
+}
+
+/* Site Navigation */
+nav {
+    background-color: tan; /* Site navigation background color */
+}
+
+nav a {
+    color: black;  /* Site navigation link color */
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 2px solid #000000;
+}
+
+nav a:hover {
+    background-color: #bf8f58; /* Site navigation highlights the color tan when hovered */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: blue;  /* Heading color blue as specified */
+}
+
+/* Responsive Image */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
