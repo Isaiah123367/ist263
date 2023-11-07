@@ -47,6 +47,15 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
 }
 
+/* Background Box */
+.background-box {
+    background-color: #f2f2f2; /* Change the color as per your preference */
+    border-radius: 15px; /* Smooth corners */
+    padding: 20px; /* Space between the box and the content inside */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    margin: 30px auto; /* Centers the box with automatic horizontal margins */
+}
+
 /* Media Query for screens with max-width of 768px */
 @media screen and (max-width: 768px) {
     .flex-container {
@@ -78,6 +87,8 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center; /* Center the text within the block element */
         padding: 10px; /* Add padding for spacing */
     }
-    span {display: none;}
-    /* The nav span rule has been removed as it seemed unnecessary based on previous code */
+    /* Adjusted the margin for the .background-box class */
+    .background-box {
+        margin: 15px; /* Adjusts the margin for smaller screens */
+    }
 }
