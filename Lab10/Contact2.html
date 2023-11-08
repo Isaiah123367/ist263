@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="lab9styles.css">
+    <style>
+        .part1 {display: flex; margin: 30px}
+        .part2 {display: flex; margin: 30px;}
+        .part1 div, .part2 div {
+            flex: 1;
+            margin: 30px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 1em;
+        }
+        .part2 {
+            margin: 50px;
+            padding: 30px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 1em;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="contacts.html">Contacts</a> |
+        <a href="skills.html">Skills</a> |
+    </nav>
+    <header>
+        <h1>Contact</h1>
+    </header>
+    <main>
+        <section class="part1">
+            <div>
+                <h2>Name:</h2>
+                <p>Isaiah Patterson</p>
+                <h2>Address:</h2>
+                <p>900 S Crouse Ave, Syracuse, NY</p>
+                <a href="mailto:iapatter@syr.edu">Isaiah Patterson's Email</a><br>
+                <a href="https://www.linkedin.com/in/isaiah-patterson-57979924b/">
+                    <img src="../images/LI-In-Bug2.png" alt="Linkedin Logo"> Linkedin Profile
+                </a><br>
+            </div>
+        </section>
+        <section class="part2">
+            <div> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11664.31082868644!2d-76.1319911!3d43.0397965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39fa35368f9%3A0xb8dcf1970308ff8c!2sOffice%20of%20Admissions!5e0!3m2!1sen!2sus!4v1694718146486" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>   
+        </section>
+        <section>
+            <form action="https://formspree.io/f/mvojwdyd" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label>Choose an option to send a message to:</label><br>
+                <input type="radio" id="Gmail" name="option" value="Gmail">
+                <label for="Gmail">Gmail</label><br>
+                <input type="radio" id="Outlook" name="option" value="Outlook">
+                <label for="Outlook">Outlook</label><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

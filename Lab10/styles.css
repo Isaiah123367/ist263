@@ -49,10 +49,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Background Box */
 .background-box {
-    background-color: #f2f2f2; /* Change the color as per your preference */
+    background-color: #f2f2f2; /* Light gray background */
     border-radius: 15px; /* Smooth corners */
     padding: 20px; /* Space between the box and the content inside */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     margin: 30px auto; /* Centers the box with automatic horizontal margins */
 }
 
@@ -67,6 +67,9 @@ h1, h2, h3, h4, h5, h6 {
         margin: 10px;
         padding: 10px;
         border: 1px solid #ccc; /* Maintaining the border color */
+        background-color: gold; /* Gold background like other skills */
+        color: black; /* Text color black for consistency */
+        border-radius: 10px; /* Rounded corners for styling */
     }
     .other-skills {
         background-color: gold; /* Gold background for other skills */
@@ -91,4 +94,20 @@ h1, h2, h3, h4, h5, h6 {
     .background-box {
         margin: 15px; /* Adjusts the margin for smaller screens */
     }
+    nav span {
+        display: none; /* Hide spans in the navigation */
+    }
 }
+/* ... existing styles ... */
+
+/* Styles for contact-container, contact-form, and google-map */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    background-color: #f7f7f7; /* Example background color */
+    padding: 20px; /* Example padding */
+    border-radius: 1em; /* Optional: if you want the container itself to have rounded corners */
+}
+
+/* ... existing media queries and other styles ... */
