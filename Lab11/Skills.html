@@ -4,26 +4,100 @@
     <meta charset="utf-8">
     <title>Skills</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport Meta Tag -->
+    <style>
+        header h1 {
+            text-align: center;
+        }
+        header p {
+            padding-left: 60px;
+            padding-right: 550px;
+            /* Extra credit styling */
+        }
+        img {
+            width: 45px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+            margin-top: 70px;
+        }
+        .flex-item .flex-container {
+            text-align: center;
+        }
+        .flex-item {
+            flex-grow: 1;
+            flex-basis: 100px;
+        }
+        aside {
+            border-radius: 1em;
+            background-color: rgb(188, 0, 0);
+            padding: 20px;
+            margin-left: 100px;
+            margin-right: 200px;
+        }
+        aside p,
+        aside h2 {
+            color: #ffffff;
+        }
+        nav a {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a> <span>|</span>
         <a href="Skills.html">Skills</a> <span>|</span>
-        <a href="Contact.html">Contact</a>
+        <a href="Contact.html">Contact</a> <span>|</span>
     </nav>
     <header>
         <h1>My Skills Table</h1>
-        <p>As my journey in IT continues, I would like to use my skills to help with cybersecurity defense. I truly believe that the future combat is not on the battlefield but through our screens.</p>
+    
+        <p>As my journey it IT continues, I would like to use my skills to help with cybersecurity defense. I truly believe that the future combat is not on the battlefield but through our screens.</p>
     </header>
     <main>
-        <!-- Main content of your skills page -->
         <div class="flex-container">
-            <!-- Your skill items -->
+            <div class="flex-item flex-container">
+                <div>
+                    <img src="../images/Python.png" alt="Python"> <!-- Fixed image tag -->
+                    <br>
+                    <p>Python</p>
+                </div>
+                <div>
+                    <img src="../images/javascript.png" alt="Javascript">
+                    <br>
+                    <p>Javascript</p>
+                </div>
+                <div>
+                    <img src="../images/running.png" alt="Running">
+                    <br>
+                    <p>Running</p>
+                </div>
+                <div>
+                    <img src="../images/cooking.png" alt="Cooking">
+                    <br>
+                    <p>Cooking</p>
+                </div>
+                <div>
+                    <img src="../images/Excel.png" alt="Excel">
+                    <br>
+                    <p>Excel</p>
+                </div>
+            </div>
+            <div class="flex-item">
+                <aside>
+                    <h2>Other Skills</h2>
+                    <p>Windows 11</p>
+                    <p>Performing under pressure</p>
+                    <p>Public Speaking</p>
+                    <p>Playing Soccer</p>
+                    <p>Teaching</p>
+                </aside>
+            </div>
         </div>
     </main>
-    <footer>
-        <!-- Footer content if any -->
-    </footer>
 </body>
 </html>
+
