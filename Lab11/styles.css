@@ -1,0 +1,113 @@
+/* Global Styles */
+body {
+    background-color: blue; /* Background color blue */
+    color: white; /* Text color white */
+}
+
+/* Links */
+a {
+    color: tan; /* Link color tan */
+}
+
+a:hover {
+    color: black;  /* Link color changes to black when hovered */
+}
+
+/* Paragraphs */
+p {
+    background-color: #7d7d7d; /* Dark gray background for paragraphs */
+    padding: 20px;
+    border: 2px solid #000000;
+}
+
+/* Site Navigation */
+nav {
+    background-color: tan; /* Site navigation background color tan */
+}
+
+nav a {
+    color: black;  /* Site navigation link color black */
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 2px solid #000000;
+}
+
+nav a:hover {
+    background-color: #bf8f58; /* Background color changes to darker tan when hovered */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: blue;  /* Heading color blue */
+}
+
+/* Responsive Image */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Background Box */
+.background-box {
+    background-color: #f2f2f2; /* Light gray background */
+    border-radius: 15px; /* Smooth corners */
+    padding: 20px; /* Space between the box and the content inside */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 30px auto; /* Centers the box with automatic horizontal margins */
+}
+
+/* Media Query for screens with max-width of 768px */
+@media screen and (max-width: 768px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .flex-item {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc; /* Maintaining the border color */
+        background-color: gold; /* Gold background like other skills */
+        color: black; /* Text color black for consistency */
+        border-radius: 10px; /* Rounded corners for styling */
+    }
+    .other-skills {
+        background-color: gold; /* Gold background for other skills */
+        color: black; /* Text color black for other skills */
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .other-skills h2 {
+        text-align: center;
+    }
+    .size {
+        max-width: 100%;
+    }
+    nav a {
+        display: block; /* Convert inline <a> to block element */
+        margin-bottom: 10px; /* Add space between the links */
+        width: 100%; /* Set the width to 100% */
+        text-align: center; /* Center the text within the block element */
+        padding: 10px; /* Add padding for spacing */
+    }
+    /* Adjusted the margin for the .background-box class */
+    .background-box {
+        margin: 15px; /* Adjusts the margin for smaller screens */
+    }
+    nav span {
+        display: none; /* Hide spans in the navigation */
+    }
+}
+/* ... existing styles ... */
+
+/* Styles for contact-container, contact-form, and google-map */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    background-color: #f7f7f7; /* Example background color */
+    padding: 20px; /* Example padding */
+    border-radius: 1em; /* Optional: if you want the container itself to have rounded corners */
+}
+
+/* ... existing media queries and other styles ... */
