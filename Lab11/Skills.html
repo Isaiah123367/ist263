@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
     <title>Skills</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         header h1 {
             text-align: center;
@@ -12,7 +12,6 @@
         header p {
             padding-left: 60px;
             padding-right: 550px;
-            /* Extra credit styling */
         }
         img {
             width: 45px;
@@ -32,56 +31,61 @@
         }
         aside {
             border-radius: 1em;
-            background-color: rgb(188, 0, 0);
+            background-color: #8B0000; /* Darker red color for better contrast */
             padding: 20px;
             margin-left: 100px;
             margin-right: 200px;
-        }
-        aside p,
-        aside h2 {
-            color: #ffffff;
+            color: #ffffff; /* Ensuring good contrast for text */
         }
         nav a {
             margin-right: 10px;
+            color: #000; /* Ensuring good contrast for navigation links */
+        }
+        /* Ensure links within the content also have good contrast */
+        a {
+            color: #0000EE; /* Standard link color; adjust if necessary */
+        }
+        a:visited {
+            color: #551A8B; /* Standard visited link color; adjust if necessary */
         }
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a> <span>|</span>
-        <a href="Skills.html">Skills</a> <span>|</span>
+        <!-- Commented out the Skills link if this is the current page to avoid redundancy -->
+        <!-- <a href="Skills.html" aria-current="page">Skills</a> <span>|</span> -->
         <a href="Contact.html">Contact</a> <span>|</span>
     </nav>
     <header>
         <h1>My Skills Table</h1>
-    
-        <p>As my journey it IT continues, I would like to use my skills to help with cybersecurity defense. I truly believe that the future combat is not on the battlefield but through our screens.</p>
+        <p>As my journey in IT continues, I would like to use my skills to help with cybersecurity defense. I truly believe that the future combat is not on the battlefield but through our screens.</p>
     </header>
     <main>
         <div class="flex-container">
             <div class="flex-item flex-container">
                 <div>
-                    <img src="../images/Python.png" alt="Python"> <!-- Fixed image tag -->
+                    <img src="../images/Python.png" alt="Python programming language logo">
                     <br>
                     <p>Python</p>
                 </div>
                 <div>
-                    <img src="../images/javascript.png" alt="Javascript">
+                    <img src="../images/javascript.png" alt="Javascript programming language logo">
                     <br>
                     <p>Javascript</p>
                 </div>
                 <div>
-                    <img src="../images/running.png" alt="Running">
+                    <img src="../images/running.png" alt="Icon of a person running">
                     <br>
                     <p>Running</p>
                 </div>
                 <div>
-                    <img src="../images/cooking.png" alt="Cooking">
+                    <img src="../images/cooking.png" alt="Icon representing cooking">
                     <br>
                     <p>Cooking</p>
                 </div>
                 <div>
-                    <img src="../images/Excel.png" alt="Excel">
+                    <img src="../images/Excel.png" alt="Microsoft Excel logo">
                     <br>
                     <p>Excel</p>
                 </div>
@@ -98,6 +102,8 @@
             </div>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
