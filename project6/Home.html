@@ -36,8 +36,9 @@
         .navigation {
             background-color: #333;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centered on larger screens */
             padding: 10px 0;
+            flex-wrap: wrap; /* Wrap items in smaller screens */
         }
 
         .navigation a {
@@ -105,17 +106,22 @@
         /* Responsive design */
         @media (max-width: 768px) {
             .navigation {
-                flex-direction: column;
+                flex-direction: column; /* Stack links vertically on small screens */
+                align-items: center; /* Center the links */
             }
 
             .amount {
-                flex-basis: calc(50% - 20px);
+                flex-basis: calc(50% - 20px); /* Adjust the width for tablet screens */
             }
         }
 
         @media (max-width: 480px) {
+            .navigation a {
+                padding: 15px 10px; /* Increase padding for better touch targets */
+            }
+
             .amount {
-                flex-basis: 100%;
+                flex-basis: 100%; /* Full width on mobile screens */
             }
         }
 
@@ -165,8 +171,12 @@
     <!-- Why you should apply section -->
     <section class="apply-section" aria-label="Why You Should Apply">
         <h2>Why You Should Apply</h2>
-        <p>The Syracuse Community Service Scholarship recognizes the vital role...</p>
-        <p>We encourage all aspiring applicants to take a proactive role in their communities...</p>
+        <p>
+            The Syracuse Community Service Scholarship recognizes the vital role that young leaders play in community development and prosperity. By highlighting the achievements of high school students who are deeply involved in community service, we aim to not only provide financial support but also to inspire a spirit of community involvement among the youth. This scholarship is a testament to the hard work, dedication, and positive impact that our young leaders have.
+        </p>
+        <p>
+            We encourage all aspiring applicants to take a proactive role in their communities. Whether it's by volunteering with local charities, engaging with school initiatives, or assisting at a food pantry, there are countless ways to contribute and make a difference. This scholarship is an opportunity to shine a light on those who give back and to support their educational journey as a reward for their commendable service.
+        </p>
         <a href="Apply.html" class="apply-now-button">Apply Now</a>
     </section>
 
