@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 12 Slideshow</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #111111;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        #slideshow-container {
+            background-color: #000000;
+            width: 1200px;
+            margin: auto; /* margin auto is centering this container */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #bigimages {
+            float: left;
+            width: 60%;
+            margin-right: 20px;
+        }
+        #bigimages img {
+            width: 100%;
+            display: none; /* Hide all images initially */
+        }
+        #bigimages img.active {
+            display: block; /* Show the active image */
+        }
+        #planetinfo {
+            float: right;
+            width: 40%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        #planetinfo > div {
+            display: none; /* Hide all planet information initially */
+        }
+        #planetinfo > div.active {
+            display: block; /* Show the active information */
+        }
+        #thumbnails {
+            clear: both;
+            text-align: center;
+            padding-top: 20px;
+        }
+        #thumbnails img {
+            width: 80px;
+            margin: 0 10px;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+        #thumbnails img:hover {
+            opacity: 1;
+        }
+        #thumbnails img#mercurythumb {
+            display: none; /* Hide Mercury thumbnail */
+        }
+    </style>
+    <script>
+        function PlanetsOff() {
+            // Hide all big images
+            var bigImages = document.querySelectorAll('#bigimages img');
+            bigImages.forEach(function(img) {
+                img.classList.remove('active');
+            });
+            
+            // Hide all planet information
+            var planetInfos = document.querySelectorAll('#planetinfo > div');
+            planetInfos.forEach(function(info) {
+                info.classList.remove('active');
+            });
+        }
+
+        function PlanetOn(planet) {
+            PlanetsOff(); // First hide all elements
+            // Show the clicked planet's big image and information
+            document.getElementById(planet).classList.add('active');
+            document.getElementById(planet + 'info').classList.add('active');
+        }
+
+        // Initialize with Mercury shown
+        window.onload = function() {
+            PlanetOn('mercury');
+        };
+    </script>
+</head>
+<body>
+<div id="slideshow-container">
+    <div id="bigimages">
+        <!-- Assuming you have the corresponding images -->
+        <img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercury">
+        <img src="https://laferger.github.io/ist263/images/venus.jpg" alt="Venus" id="venus">
+        <img src="https://laferger.github.io/ist263/images/earth.jpg" alt="Earth" id="earth">
+        <img src="https://laferger.github.io/ist263/images/mars.jpg" alt="Mars" id="mars">
+        <img src="https://laferger.github.io/ist263/images/jupiter.jpg" alt="Jupiter" id="jupiter">
+        <img src="https://laferger.github.io/ist263/images/saturn.jpg" alt="Saturn" id="saturn">
+        <img src="https://laferger.github.io/ist263/images/uranus.jpg" alt="Uranus" id="uranus">
+        <img src="https://laferger.github.io/ist263/images/neptune.jpg" alt="Neptune" id="neptune">
+    </div>
+    <div id="planetinfo">
+        <h1>Planet Slideshow</h1>
+        <div id="mercuryinfo" class="active">
+            <p>Mercury is the smallest and innermost planet in the Solar System. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the planets in the Solar System. It is named after the Greek god Hermes (Ερμής), translated into Latin Mercurius Mercury, god of commerce, messenger of the gods, mediator between gods and mortals.</p>
+        </div>
+        <div id="venusinfo">
+            <p>Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the second-brightest natural object in the night sky after the Moon, Venus can cast shadows and can be, on rare occasion, visible to the naked eye in broad daylight. Venus lies within Earth's orbit, and so never appears to venture far from the Sun, either setting in the west just after dusk or rising in the east a bit before dawn. Venus orbits the Sun every 224.7 Earth days. </p>
+        </div>
+        <div id="earthinfo">
+            <p>Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 29% of Earth's surface is land consisting of continents and islands. The remaining 71% is covered with water, mostly by oceans but also lakes, rivers and other fresh water, which together constitute the hydrosphere. Much of Earth's polar regions are covered in ice.</p>
+        </div>
+        <div id="marsinfo">
+            <p>Mars is a terrestrial planet with a thin atmosphere, with surface features reminiscent of the impact craters of the Moon and the valleys, deserts and polar ice caps of Earth.</p>
+        </div>
+        <div id="jupiterinfo">
+            <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. It is named after the Roman god Jupiter.</p>
+        </div>
+        <div id="saturninfo">
+            <p>Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine times that of Earth. It only has one-eighth the average density of Earth; however, with its larger volume, Saturn is over 95 times more massive.</p>
+        </div>
+        <div id="uranusinfo">
+            <p>Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus, who, according to Greek mythology, was the grandfather of Zeus (Jupiter) and father of Cronus (Saturn). It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. </p>
+        </div>
+        <div id="neptuneinfo">
+            <p>Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, slightly more massive than its near-twin Uranus.</p>
+        </div>
+    </div>
+    <div id="thumbnails">
+        <!-- Thumbnails for planets -->
+        <img onclick="PlanetOn('mercury');" src="https://laferger.github.io/ist263/images/mecury.jpg"alt="Mercury" id="mercurythumb">
+        <img onclick="PlanetOn('venus');" src="https://laferger.github.io/ist263/images/venus.jpg" alt="Venus" id="venusthumb">
+        <img onclick="PlanetOn('earth');" src="https://laferger.github.io/ist263/images/earth.jpg" alt="Earth" id="earththumb">
+        <img onclick="PlanetOn('mars');" src="https://laferger.github.io/ist263/images/mars.jpg" alt="Mars" id="marsthumb">
+        <img onclick="PlanetOn('jupiter');" src="https://laferger.github.io/ist263/images/jupiter.jpg" alt="Jupiter" id="jupiterthumb">
+        <img onclick="PlanetOn('saturn');" src="https://laferger.github.io/ist263/images/saturn.jpg" alt="Saturn" id="saturnthumb">
+        <img onclick="PlanetOn('uranus');" src="https://laferger.github.io/ist263/images/uranus.jpg" alt="Uranus" id="uranusthumb">
+        <img onclick="PlanetOn('neptune');" src="https://laferger.github.io/ist263/images/neptune.jpg" alt="Neptune" id="neptunethumb">
+    </div>
+</div>
+</body>
+</html>
