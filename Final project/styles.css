@@ -71,7 +71,7 @@ body {
 
 .apply-now-link button {
     background-color: #4CAF50; /* A green color for the button */
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
     text-align: center;
