@@ -16,6 +16,7 @@
             padding: 0;
             text-align: center;
             background: #f0f0f0; /* Light grey background to fill the space */
+            color: #FFFFFF; /* Changed for contrast */
         }
 
         header, footer {
@@ -27,6 +28,11 @@
             color: white;
             text-decoration: none;
             padding: 10px;
+            background-color: #000000; /* For contrast */
+        }
+
+        .navigation a:hover, .navigation a:focus {
+            background-color: #222222; /* Slightly lighter for hover state */
         }
 
         .profile-section, .location-map, .apply-section {
@@ -34,6 +40,7 @@
             background: white; /* White background for content sections */
             margin-bottom: 20px; /* Spacing between sections */
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+            color: #000000; /* Changed for contrast */
         }
 
         .profile-image {
@@ -51,7 +58,7 @@
         }
 
         .apply-button {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Keeping the green color */
             color: white;
             padding: 15px 30px; /* Larger button */
             border: none;
@@ -66,7 +73,7 @@
         }
 
         .apply-button:hover {
-            background-color: #4CAF50;
+            background-color: #367c39; /* Darker shade for hover effect */
         }
 
         @media (max-width: 768px) {
@@ -107,7 +114,7 @@
         </section>
 
         <div class="apply-section">
-            <a href="Apply.html" class="apply-button">Apply Now</a>
+            <a href="Apply.html" class="apply-button" aria-label="Apply for the scholarship">Apply Now</a>
         </div>
     </main>
 
