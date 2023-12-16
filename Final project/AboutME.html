@@ -5,60 +5,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Isaiah Patterson</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Make sure this path is correct -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@300&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Kalnia', serif; /* Apply Kalnia font to the body */
+            font-family: 'Kalnia', serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #f0f0f0; /* Light grey background to fill the space */
         }
-        /* Additional styles can be added here */
+
+        header, footer {
+            background: #333; /* Dark background for header/footer */
+            color: white;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .profile-section, .location-map, .apply-section {
+            padding: 40px 20px;
+            background: white; /* White background for content sections */
+            margin-bottom: 20px; /* Spacing between sections */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        }
+
+        .profile-image {
+            width: 200px; /* Slightly larger image */
+            height: auto;
+            border-radius: 50%;
+            margin: 40px auto; /* Increased margin */
+            display: block;
+        }
+
+        .profile-description, .location-map {
+            max-width: 800px; /* Wider content areas */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .apply-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px; /* Larger button */
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            cursor: pointer;
+            font-size: 18px; /* Larger text */
+        }
+
+        .apply-button:hover {
+            background-color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            .profile-image {
+                width: 150px; /* Smaller image for mobile */
+            }
+
+            .profile-description, .location-map, .apply-button {
+                max-width: 90%;
+                box-sizing: border-box;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation menu -->
-    <nav class="navigation">
-        <a href="Home.html">Home</a>
-        <a href="AboutME.html">About Me</a>
-        <a href="Apply.html">Apply</a>
-    </nav>
+    <header>
+        <nav class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="AboutME.html">About Me</a>
+            <a href="Apply.html">Apply</a>
+        </nav>
+    </header>
 
-    <img src="../images/Me.JPG" alt="Isaiah Patterson" class="profile-image">
-    <h1>About Me</h1>
-    <p>
-        Hello, my name is Isaiah Patterson. I am currently a sophomore at Syracuse University and a founder of this scholarship. My goal is to reward young African Americans who are community leaders because these are the people who are going to lead our people to success. I have made my own mentorship program and believe that people who want to follow in similar steps or people who have helped people in other ways should be recognized.
-    </p>
+    <main>
+        <section class="profile-section">
+            <img src="../images/Me.JPG" alt="Isaiah Patterson" class="profile-image">
+            <div class="profile-description">
+                <h1>About Me</h1>
+                <p>
+                    Hello, my name is Isaiah Patterson. I am currently a sophomore at Syracuse University and a founder of this scholarship. My goal is to reward young African Americans who are community leaders because these are the people who are going to lead our people to success. I have made my own mentorship program and believe that people who want to follow in similar steps or people who have helped people in other ways should be recognized.
+                </p>
+            </div>
+        </section>
 
-    <!-- Separate Flexbox for Contact Information -->
-    <div class="flex-container contact-container">
-        <h2>Contact Information</h2>
-        <p>Name: Isaiah Patterson</p>
-        <p>Address: 900 S Crouse Ave, Syracuse, NY</p>
-        <p>Email: <a href="mailto:iapatter@syr.edu">iapatter@syr.edu</a></p>
-        <p>Linkedin: <a href="https://www.linkedin.com/in/isaiah-patterson-57979924b/">Isaiah's Profile</a></p>
-    </div>
+        <section class="location-map">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.13218774253!2d-76.13626712385546!3d43.03865017113802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39fba2ccc55%3A0x5e6089065251084d!2sSyracuse%20University!5e0!3m2!1sen!2sus!4v1694716987140!5m2!1sen!2sus" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
 
-    <!-- Separate Flexbox for Map -->
-    <div class="flex-container map-container">
-        <h2>Our Location</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.13218774253!2d-76.13626712385546!3d43.03865017113802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39fba2ccc55%3A0x5e6089065251084d!2sSyracuse%20University!5e0!3m2!1sen!2sus!4v1694716987140!5m2!1sen!2sus" width="100%" height="300" frameborder="0" allowfullscreen=""></iframe>
-    </div>
-
-    <p><strong>"Our mission is to empower young African American leaders..."</strong></p>
-    
-    <!-- Apply Now Button -->
-    <div class="apply-now">
-        <a href="Apply.html" class="apply-now-link">
-            <button type="button">Apply Now</button>
-        </a>
-    </div>
+        <div class="apply-section">
+            <a href="Apply.html" class="apply-button">Apply Now</a>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; Isaiah Patterson 2023</p>
     </footer>
 
-    <!-- Link to JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
