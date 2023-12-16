@@ -4,6 +4,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Isaiah Patterson Scholarship Program - Empowering Young Leaders</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +16,8 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background: #f0f0f0;
-            color: #333333;
+            color: #333333; /* Default text color for light theme */
+            background: #f0f0f0; /* Default background color for light theme */
         }
 
         header, footer {
@@ -75,6 +76,18 @@
 
         @media (max-width: 768px) {
             /* Responsive adjustments... */
+        }
+
+        /* Styles for dark theme */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #ffffff; /* White text for dark theme */
+                background-color: #000000; /* Black background for dark theme */
+            }
+
+            .navigation a, .apply-button {
+                color: #000000; /* Black text for buttons and links in dark theme */
+            }
         }
     </style>
 </head>
