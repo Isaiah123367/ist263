@@ -10,57 +10,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@300&display=swap" rel="stylesheet">
     <style>
+        /* Existing styles... */
+
         body {
-            font-family: 'Kalnia', serif;
             margin: 0;
             padding: 0;
             text-align: center;
-            background: #f0f0f0; /* Light grey background to fill the space */
-            color: #FFFFFF; /* Changed for contrast */
+            background: #f0f0f0;
+            color: #333;
         }
 
         header, footer {
-            background: #333; /* Dark background for header/footer */
+            padding: 20px;
             color: white;
+            background-color: #333;
         }
 
         .navigation a {
             color: white;
             text-decoration: none;
             padding: 10px;
-            background-color: #000000; /* For contrast */
+            background-color: #333
         }
 
         .navigation a:hover, .navigation a:focus {
-            background-color: #222222; /* Slightly lighter for hover state */
+            background-color: #222222;
         }
 
         .profile-section, .location-map, .apply-section {
-            padding: 40px 20px;
-            background: white; /* White background for content sections */
-            margin-bottom: 20px; /* Spacing between sections */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-            color: #000000; /* Changed for contrast */
+            padding: 20px;
+            background: white;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .profile-image {
-            width: 200px; /* Slightly larger image */
+            max-width: 100%;
             height: auto;
-            border-radius: 50%;
-            margin: 40px auto; /* Increased margin */
-            display: block;
-        }
-
-        .profile-description, .location-map {
-            max-width: 800px; /* Wider content areas */
-            margin: 0 auto;
-            padding: 20px;
         }
 
         .apply-button {
-            background-color: #4CAF50; /* Keeping the green color */
+            background-color: #4CAF50;
             color: white;
-            padding: 15px 30px; /* Larger button */
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
             text-transform: uppercase;
@@ -69,22 +61,21 @@
             display: inline-block;
             margin: 20px 0;
             cursor: pointer;
-            font-size: 18px; /* Larger text */
+            font-size: 18px;
         }
 
         .apply-button:hover {
-            background-color: #367c39; /* Darker shade for hover effect */
+            background-color: #367c39;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            height: 450px;
         }
 
         @media (max-width: 768px) {
-            .profile-image {
-                width: 150px; /* Smaller image for mobile */
-            }
-
-            .profile-description, .location-map, .apply-button {
-                max-width: 90%;
-                box-sizing: border-box;
-            }
+            /* Responsive adjustments... */
         }
     </style>
 </head>
@@ -102,15 +93,13 @@
             <img src="../images/Me.JPG" alt="Isaiah Patterson" class="profile-image">
             <div class="profile-description">
                 <h1>About Me</h1>
-                <p>
-                    Hello, my name is Isaiah Patterson. I am currently a sophomore at Syracuse University and a founder of this scholarship. My goal is to reward young African Americans who are community leaders because these are the people who are going to lead our people to success. I have made my own mentorship program and believe that people who want to follow in similar steps or people who have helped people in other ways should be recognized.
-                </p>
+                <p>Hello, my name is Isaiah Patterson. I am currently a sophomore at Syracuse University and a founder of this scholarship. My goal is to reward young African Americans who are community leaders because these are the people who are going to lead our people to success. I have made my own mentorship program and believe that people who want to follow in similar steps or people who have helped people in other ways should be recognized.</p>
             </div>
         </section>
 
         <section class="location-map">
             <h2>Our Location</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.13218774253!2d-76.13626712385546!3d43.03865017113802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39fba2ccc55%3A0x5e6089065251084d!2sSyracuse%20University!5e0!3m2!1sen!2sus!4v1694716987140!5m2!1sen!2sus" width="800" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.13218774253!2d-76.13626712385546!3d43.03865017113802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39fba2ccc55%3A0x5e6089065251084d!2sSyracuse%20University!5e0!3m2!1sen!2sus!4v1694716987140!5m2!1sen!2sus" width="800" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
 
         <div class="apply-section">
