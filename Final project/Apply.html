@@ -86,6 +86,10 @@
             background-color: #4cae4c;
         }
 
+        .submit-cell {
+            text-align: center;
+        }
+
         /* Footer styles */
         footer {
             background-color: #333;
@@ -137,14 +141,14 @@
             </tr>
             <tr>
                 <td>Why do you want to apply?:</td>
-                <td><textarea name="applicationReason" rows="5" cols="50" required></textarea></td>
+                <td><textarea name="applicationReason" rows="5" required></textarea></td>
             </tr>
             <tr>
                 <td>Upload Resume:</td>
                 <td><input type="file" name="resume"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><input type="submit" value="Submit Application"></td>
+                <td colspan="2" class="submit-cell"><input type="submit" value="Submit Application"></td>
             </tr>
         </table>
     </form>
