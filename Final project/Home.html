@@ -13,18 +13,35 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Kalnia', serif; /* Unified font family */
+            font-family: 'Kalnia', serif;
         }
 
-        /* Banner styles with solid color for title box and image below */
+        /* Skip to Content link styles */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Banner styles */
         .banner {
             text-align: center;
             padding: 20px 0;
-            background-color: #333; /* Title box background color */
+            background-color: #333;
         }
 
         .banner-title {
-            font-size: 2em; /* Adjust size as necessary */
+            font-size: 2em;
             color: white;
             margin: 0;
             animation: fadeInDown 1s ease-in-out;
@@ -40,9 +57,9 @@
         .navigation {
             background-color: #333;
             display: flex;
-            justify-content: center; /* Centered on larger screens */
+            justify-content: center;
             padding: 10px 0;
-            flex-wrap: wrap; /* Wrap items in smaller screens */
+            flex-wrap: wrap;
         }
 
         .navigation a {
@@ -57,7 +74,7 @@
             color: #ddd;
         }
 
-        /* Scholarship Amounts styles */
+        /* Award Amounts styles */
         .award-amounts {
             display: flex;
             justify-content: space-around;
@@ -110,22 +127,22 @@
         /* Responsive design */
         @media (max-width: 768px) {
             .navigation {
-                flex-direction: column; /* Stack links vertically on small screens */
-                align-items: center; /* Center the links */
+                flex-direction: column;
+                align-items: center;
             }
 
             .amount {
-                flex-basis: calc(50% - 20px); /* Adjust the width for tablet screens */
+                flex-basis: calc(50% - 20px);
             }
         }
 
         @media (max-width: 480px) {
             .navigation a {
-                padding: 15px 10px; /* Increase padding for better touch targets */
+                padding: 15px 10px;
             }
 
             .amount {
-                flex-basis: 100%; /* Full width on mobile screens */
+                flex-basis: 100%;
             }
         }
 
@@ -149,6 +166,9 @@
 </head>
 <body>
 
+    <!-- Skip to Content link -->
+    <a href="#maincontent" class="skip-link">Skip to Content</a>
+
     <!-- Navigation menu -->
     <nav class="navigation" aria-label="Main navigation">
         <a href="Home.html" class="nav-link">Home</a>
@@ -165,7 +185,7 @@
     <img src="../images/Peoplewalking.jpg" alt="Community members walking together in Syracuse" class="banner-image">
 
     <!-- Scholarship Award Amounts Section -->
-    <section class="award-amounts" aria-label="Scholarship Award Amounts">
+    <section class="award-amounts" id="maincontent" aria-label="Scholarship Award Amounts">
         <div class="amount gold">$1,000</div>
         <div class="amount silver">$2,000</div>
         <div class="amount bronze">$5,000</div>
